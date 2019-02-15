@@ -1,8 +1,12 @@
-workflow "Python Syntax Checker" {
+workflow "on push" {
   on = "push"
-  resolves = ["Find Python 3 syntax errors and undefined names"]
+  resolves = ["Python Style Checker", "Python Syntax Checker"]
 }
 
-action "Find Python 3 syntax errors and undefined names" {
+action "Python Style Checker" {
+  uses = "andymckay/pycodestyle-action@master"
+}
+
+action "Python Syntax Checker" {
   uses = "cclauss/Find-Python-syntax-errors-action@master"
 }
