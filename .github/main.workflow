@@ -23,7 +23,7 @@ action "GitHub Action for pylint" {
 
 action "GitHub Action for pytest" {
   uses = "cclauss/GitHub-Action-for-pytest@master"
-  args = "pytest"
+  args = "pytest --help"
 }
 
 action "GitHub Action for pyup Safety" {
