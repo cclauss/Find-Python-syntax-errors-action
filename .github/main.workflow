@@ -18,7 +18,7 @@ action "GitHub Action for Flake8" {
 
 action "GitHub Action for pylint" {
   uses = "cclauss/GitHub-Action-for-pylint@master"
-  args = "pylint"
+  args = "pylint --help"
 }
 
 action "GitHub Action for pytest" {
