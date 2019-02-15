@@ -4,12 +4,12 @@ If there are ___syntax errors or undefined names___ found in your Python code th
 
 Example workflow (Put the following text into `.github/main.workflow`):
 ```
-workflow "Python Syntax Checker" {
+workflow "on push" {
   on = "push"
-  resolves = ["Find Python 3 syntax errors and undefined names"]
+  resolves = ["Python Syntax Checker"]
 }
 
-action "Find Python 3 syntax errors and undefined names" {
+action "Python Syntax Checker" {
   uses = "cclauss/Find-Python-syntax-errors-action@master"
 }
 ```
