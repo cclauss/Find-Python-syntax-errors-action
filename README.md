@@ -4,7 +4,7 @@ If there are ___syntax errors or undefined names___ found in your Python code th
 
 Example workflow (Put the following text into `.github/main.workflow`):
 ```
-workflow "New workflow" {
+workflow "Python Syntax Checker" {
   on = "push"
   resolves = ["Find Python 3 syntax errors and undefined names"]
 }
