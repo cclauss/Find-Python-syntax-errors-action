@@ -10,4 +10,4 @@ RUN pip install flake8
 RUN python --version ; pip --version ; echo "flake8 $(flake8 --version)"
 RUN echo "===================="
 
-CMD ["flake8", "/github/workspace/", "--count", "--select=E901,E999,F821,F822,F823", "--show-source", "--statistics"]
+CMD ["flake8", ".", "--count", "--select=E901,E999,F821,F822,F823", "--show-source", "--statistics"]
