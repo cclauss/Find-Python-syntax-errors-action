@@ -7,7 +7,6 @@ LABEL "com.github.actions.color"="6f42c1"
 
 RUN pip install --upgrade pip
 RUN pip install flake8
-RUN python --version ; pip --version ; echo "flake8 $(flake8 --version)"
-RUN echo "===================="
+RUN python --version ; pip --version ; echo "flake8 $(flake8 --version)" ; echo "===================="
 
 CMD ["flake8", ".", "--count", "--select=E901,E999,F821,F822,F823", "--show-source", "--statistics"]
