@@ -1,6 +1,7 @@
 workflow "on push" {
   on = "push"
-  resolves = ["Python Style Checker", "Python Syntax Checker", "GitHub Action for Flake8", "GitHub Action for pylint", "GitHub Action for pytest", "GitHub Action for pyup Safety", "GitHub Action for cpplint"]
+  # resolves = ["Python Style Checker", "Python Syntax Checker", "GitHub Action for Flake8", "GitHub Action for pylint", "GitHub Action for pytest", "GitHub Action for pyup Safety", "GitHub Action for cpplint"]
+  resolves = ["Python Syntax Checker", "GitHub Action for Flake8", "GitHub Action for pylint", "GitHub Action for pytest"]
 }
 
 action "Python Style Checker" {
