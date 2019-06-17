@@ -9,4 +9,4 @@ RUN pip install --upgrade pip
 RUN pip install flake8
 RUN python --version ; pip --version ; echo "flake8 $(flake8 --version)" ; echo "===================="
 
-CMD ["flake8", ".", "--count", "--select=E901,E999,F821,F822,F823", "--show-source", "--statistics"]
+CMD ["flake8", ".", "--count", "--select=E9,F63,F72,F82", "--show-source", "--statistics"]
