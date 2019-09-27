@@ -1,0 +1,22 @@
+on: push
+name: on push
+jobs:
+  gitHubActionForPytest:
+    name: GitHub Action for pytest
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: GitHub Action for pytest
+      uses: cclauss/GitHub-Action-for-pytest@master
+      with:
+        args: pytest --help
+    - name: GitHub Action for pylint
+      uses: cclauss/GitHub-Action-for-pylint@master
+      with:
+        args: pylint --help
+    - name: GitHub Action for Flake8
+      uses: cclauss/GitHub-Action-for-Flake8@master
+      with:
+        args: flake8 . --max-line-length=88
+    - name: Python Syntax Checker
+      uses: cclauss/Find-Python-syntax-errors-action@master
