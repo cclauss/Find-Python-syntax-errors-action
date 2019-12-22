@@ -2,16 +2,16 @@
 A GitHub Action that runs selected [flake8](http://flake8.pycqa.org) tests on the Python code in your repo.
 If there are ___syntax errors or undefined names___ found in your Python code then this Action will fail.
 
-Example workflow (Put the following text into `.github/main.workflow`):
-```
-workflow "on push" {
-  on = "push"
-  resolves = ["Python Syntax Checker"]
-}
-
-action "Python Syntax Checker" {
-  uses = "cclauss/Find-Python-syntax-errors-action@master"
-}
+Example workflow (Put the following text into `.github/workflows/main.yml`):
+```yaml
+on: push
+name: Lint Python
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: cclauss/Find-Python-syntax-errors-action@master
 ```
 ## Flake8 finds Python 3 syntax errors and undefined names
 $ __flake8 . --count --select=E9,F63,F72,F82 --show-source --statistics__
