@@ -1,0 +1,8 @@
+name: "Python Syntax Checker"
+description: "Run flake8 to find syntax errors in a Python repo"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+branding:
+  icon: upload-cloud
+  color: purple
