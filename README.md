@@ -23,7 +23,8 @@ __E901,E999,F821,F822,F823__ are the "_showstopper_" [flake8](http://flake8.pycq
 * E901: SyntaxError or IndentationError
 * E999: SyntaxError -- failed to compile a file into an Abstract Syntax Tree
 
-## Instead of using this action, you can add the file `.github/workflows/lint_python.yml` to your repo...
+## For more tests and more control, instead of using this action,
+## You can add the file `.github/workflows/lint_python.yml` to your repo...
 ```yaml
 name: lint_python
 on: [pull_request, push]
